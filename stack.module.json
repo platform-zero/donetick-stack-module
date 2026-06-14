@@ -1,0 +1,14 @@
+{
+  "schemaVersion": 1,
+  "id": "donetick",
+  "repo": "donetick-stack-module",
+  "runtimeId": "donetick",
+  "lifecycle": "active",
+  "dependencies": [
+    "stack-foundation"
+  ],
+  "overlays": [
+    "stack.compose/donetick.yml",
+    "stack.config/donetick"
+  ]
+}
