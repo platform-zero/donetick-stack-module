@@ -38,3 +38,8 @@ services:
 
 volumes:
   donetick_data:
+    driver: local
+    driver_opts:
+      type: bind
+      o: bind
+      device: ${STACK_VOLUME_ROOT}/donetick_data
