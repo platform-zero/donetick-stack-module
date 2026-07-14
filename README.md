@@ -6,7 +6,7 @@
 - Lifecycle: `active`
 
 ## Owned overlays
-- `stack.compose/donetick.yml`
+- `stack.runtime.yaml`
 - `stack.config/donetick`
 
 ## Dependencies
