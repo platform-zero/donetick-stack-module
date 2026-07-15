@@ -1,6 +1,8 @@
 name: "Donetick"
 is_done_tick_dot_com: false
-is_user_creation_disabled: true
+# Edge authentication and Keycloak group policy gate this route. Native OIDC
+# must be allowed to provision a user's Donetick record on first login.
+is_user_creation_disabled: false
 telegram:
   token: ""
 pushover:
