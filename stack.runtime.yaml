@@ -18,7 +18,10 @@ services:
       DT_JWT_SECRET: "${DONETICK_JWT_SECRET:?DONETICK_JWT_SECRET is required}"
       DT_SERVER_PUBLIC_HOST: "https://donetick.${DOMAIN}"
       DONETICK_DISABLE_SIGNUP: "true"
-      DT_IS_USER_CREATION_DISABLED: "true"
+      # Caddy/Keycloak already enforce stack membership. Donetick must permit
+      # first-login OIDC provisioning or a valid Keycloak user is returned to
+      # the native login page without a service session.
+      DT_IS_USER_CREATION_DISABLED: "false"
       DT_OAUTH2_CLIENT_ID: "donetick"
       DT_OAUTH2_CLIENT_SECRET: "${DONETICK_OAUTH_SECRET:?DONETICK_OAUTH_SECRET is\
         \ required}"
