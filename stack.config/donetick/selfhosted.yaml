@@ -20,6 +20,11 @@ server:
   write_timeout: 10s
   rate_period: 60s
   rate_limit: 300
+  # The Android WebView sends cross-origin API requests from its local origin.
+  cors_allow_origins:
+    - "https://localhost"
+    - "http://localhost"
+    - "capacitor://localhost"
   serve_frontend: true
   serve_swagger: true
   public_host: ""
